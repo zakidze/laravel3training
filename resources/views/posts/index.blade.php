@@ -39,6 +39,7 @@
                 @csrf
                 <button type="submit" class="text-blue-500">unlike</button>
             </form>
+            <span> {{$post->likes->count()}} {{Str::plural('like',$post->likes-> count() )}}</span>
         </div>
         @endforeach
         {{$posts->links()}}
